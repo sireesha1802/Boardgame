@@ -1,4 +1,4 @@
-weipipeline {
+pipeline {
     agent any
     
     tools {
