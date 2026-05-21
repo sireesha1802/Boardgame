@@ -1,0 +1,10 @@
+name: Main Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-workflow:
+    uses: username/repo/.github/workflows/build.yml@main
