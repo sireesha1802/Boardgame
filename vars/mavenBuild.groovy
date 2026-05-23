@@ -4,7 +4,7 @@ def call() {
 
         echo "Build Started"
 
-        sh 'mvn clean install'
+        sh 'maven clean install'
 
         echo "Build Successful"
 
