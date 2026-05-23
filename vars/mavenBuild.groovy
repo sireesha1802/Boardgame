@@ -1,5 +1,3 @@
-## vars/mavenBuild.groovy
-
 def call() {
 
     catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
