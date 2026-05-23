@@ -1,6 +1,6 @@
 def call() {
 
-    catchError(buildResult: 'FAILURE', stageResult: 'SUCCESS') {
+    catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
 
         echo "Build Started"
 
