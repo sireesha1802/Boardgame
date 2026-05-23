@@ -1,23 +1,15 @@
+## vars/mavenBuild.groovy
+
 def call() {
 
-    try {
+    catchError(buildResult: 'FAILURE', stageResult: 'FAILURE') {
 
         echo "Build Started"
 
-        sh 'maven clean install'
+        sh 'mvn clean install'
 
         echo "Build Successful"
-
-    } catch(Exception e) {
-
-        echo "Build Failed"
-
-        echo "Error: ${e}"
-
-        currentBuild.result = 'FAILURE'
-
-    } finally {
-
-        echo "Pipeline Execution Completed"
     }
+
+    echo "Pipeline Execution Continued"
 }
