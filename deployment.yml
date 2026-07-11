@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: deployment
+metadata:
+  name: boardgame-deployment
+spec:
+  selector:
+    matchLables:
+      app: boardgame
+    replicas: 2
+    template:
+      metadata:
+        labels:
+          app: boardgame
+      spec:
+        containers:
+          name: sireeshahub1802/board:6
+          imagePullPolicy: Always
+          ports:
+            - containerport: 8080
