@@ -1,0 +1,13 @@
+apiVersion: V1
+kind: service
+metadata:
+  name: boardgame-svc
+spec:
+  selector:
+    app: boardgame
+  ports:
+    - protocol: "TCP"
+      port: 80
+      targetport: 8080
+  type: LoadBalancer    
+    
