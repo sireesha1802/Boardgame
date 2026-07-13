@@ -1,13 +1,13 @@
-FROM openjdk:17-alpine
-MAINTAINER siri
-        
-EXPOSE 8080
- 
-ENV APP_HOME /usr/src/app
+FROM eclipse-temurin:17-jdk-alpine
 
-COPY target/*.jar $APP_HOME/app.jar
+LABEL maintainer="siri"
+
+EXPOSE 8080
+
+ENV APP_HOME=/usr/src/app
 
 WORKDIR $APP_HOME
 
-CMD ["java", "-jar", "app.jar"]
+COPY target/*.jar app.jar
 
+CMD ["java", "-jar", "app.jar"]
